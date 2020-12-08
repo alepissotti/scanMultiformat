@@ -7,8 +7,24 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-md-6 offset-md-3>
+        <ion-card>
+          <ion-card-header color="primary">
+            <ion-card-title><ion-label text-center text-wrap>Escaneo por Cámara</ion-label></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="contenedorVideo" no-margin col-12 *ngIf="tieneCamaraYNoEsPc">
+                    <video id="videoScan" width="100%"></video>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
